@@ -1,0 +1,24 @@
+.footer {
+    grid-area: footer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-bg-color);
+  }
+  .footer__list {
+    display: flex;
+    align-items: center;
+  }
+  .footer__img {
+    width: 30px;
+    margin: 4px 8px;
+  }
+  .footer__content {
+    color: var(--primary-color);
+    font-size: var(--font-size-medium);
+    margin: 8px;
+  }
+  
+  /***** footer Ends Here *****/
