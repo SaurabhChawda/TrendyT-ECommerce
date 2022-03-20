@@ -7,6 +7,8 @@ import {
   SortByCategory,
   SortByRating,
   SortByRange,
+  ClearFilter,
+  ProductCart,
 } from "./Components/Index";
 
 export function Product() {
@@ -23,7 +25,7 @@ export function Product() {
         <ClearFilter />
       </div>
       <main>
-        
+        <ProductCart />
       </main>
       <Footer />
     </div>

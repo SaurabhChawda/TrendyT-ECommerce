@@ -4,3 +4,4 @@ export { SortByCategory } from "./SortByCategory";
 export { SortByRating } from "./SortByRating";
 export { SortByRange } from "./SortByRange";
 export { ClearFilter } from "./ClearFilter";
+export { ProductCart } from "./ProductCart";
