@@ -1,6 +1,3 @@
-import Logo from "../../assets/image/HomePage-Images/Trendy-T Logo.png";
-import HamburgerIcon from "../../assets/image/HomePage-Images/Hamburger Menu.png";
-import CloseHamburger from "../../assets/image/HomePage-Images/Hamburger Close.png";
 import "./navForMobile.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
@@ -12,13 +9,17 @@ export const NavForMobile = () => {
       <div className="nav-bar nav-bar--hamburger">
         <div className="nav-bar--logo">
           <NavLink to="/">
-            <img className="nav-bar__img--logo" src={Logo} alt="Trendy-T" />
+            <img
+              className="nav-bar__img--logo"
+              src="/assets/image/HomePage-Images/Trendy-T Logo.png"
+              alt="Trendy-T"
+            />
           </NavLink>
         </div>
         <div className="nav-bar--hamburger">
           <img
             className="nav-bar__img--hamburger"
-            src={HamburgerIcon}
+            src="/assets/image/HomePage-Images/Hamburger Menu.png"
             alt="Hamburger"
             onClick={() => setOpen(true)}
           />
@@ -33,7 +34,7 @@ export const NavForMobile = () => {
           <h1 className="hamburger__title">TRENDY-T</h1>
           <img
             className="hamburger__close-btn"
-            src={CloseHamburger}
+            src="/assets/image/HomePage-Images/Hamburger Close.png"
             alt="Hamburger"
             onClick={() => setOpen(false)}
           />
