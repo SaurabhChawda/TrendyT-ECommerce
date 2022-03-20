@@ -1,6 +1,7 @@
 import React from "react";
 import "./nav.css";
 import { NavLink } from "react-router-dom";
+
 import Logo from "../../assets/image/HomePage-Images/Trendy-T Logo.png";
 import cart from "../../assets/image/HomePage-Images/cart.png";
 import wishList from "../../assets/image/HomePage-Images/Wishlist.png";

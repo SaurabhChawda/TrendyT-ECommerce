@@ -26,7 +26,7 @@ export const NavForMobile = () => {
       </div>
 
       <div
-        style={open ? { width: "50vw" } : { width: "0" }}
+        style={open ? { width: "13rem" } : { width: "0" }}
         className="hamburger"
       >
         <div className="hamburger__header--wrapper">
