@@ -1,12 +1,4 @@
 import { v4 as uuid } from "uuid";
-import feelAlive from "/assets/image/Product-Images/feel Alive";
-import googleIt from "/assets/image/Product-Images/google IT.jpg";
-import love from "/assets/image/Product-Images/Love.jpg";
-import math from "/assets/image/Product-Images/math.jpg";
-import Owl from "/assets/image/Product-Images/Owl.jpg";
-import TalkToYouLater from "/assets/image/Product-Images/Talk to you later.jpg";
-import Tom from "/assets/image/Product-Images/Tom.jpg";
-import TomAndJerry from "/assets/image/Product-Images/Tom and Jerry.jpg";
 
 /**
  * Product Database can be added here.
@@ -16,7 +8,7 @@ import TomAndJerry from "/assets/image/Product-Images/Tom and Jerry.jpg";
 export const products = [
   {
     _id: uuid(),
-    img: math,
+    img: "/assets/image/Product-Images/math.jpg",
     title: "Mathematics",
     price: 350,
     originalPrice: 650,
@@ -25,16 +17,16 @@ export const products = [
   },
   {
     _id: uuid(),
-    img: feelAlive,
+    img: "/assets/image/Product-Images/feel Alive.jpg",
     title: "Feel Alive",
     price: 450,
     originalPrice: 550,
     categoryName: "Man",
-    Rating: 3,
+    Rating: 2,
   },
   {
     _id: uuid(),
-    img: googleIt,
+    img: "/assets/image/Product-Images/google IT.jpg",
     title: "Google It",
     price: 350,
     originalPrice: 650,
@@ -43,7 +35,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    img: Owl,
+    img: "/assets/image/Product-Images/Owl.jpg",
     title: "Owl T-Shirt",
     price: 350,
     originalPrice: 500,
@@ -52,7 +44,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    img: love,
+    img: "/assets/image/Product-Images/Love.jpg",
     title: "Camera Love",
     price: 450,
     originalPrice: 550,
@@ -61,7 +53,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    img: Tom,
+    img: "/assets/image/Product-Images/Tom.jpg",
     title: "Tom",
     price: 350,
     originalPrice: 500,
@@ -70,7 +62,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    img: TomAndJerry,
+    img: "/assets/image/Product-Images/Tom and Jerry.jpg",
     title: "Tom and Jerry",
     price: 450,
     originalPrice: 550,
@@ -79,7 +71,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    img: TalkToYouLater,
+    img: "/assets/image/Product-Images/Talk to you later.jpg",
     title: "Talk to you later",
     price: 350,
     originalPrice: 650,

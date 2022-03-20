@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { useProducts } from "../../Contexts/ProductsContext";
+import { useProducts } from "../../../Contexts/ProductsContext";
 
 export const Product = () => {
   const { data } = useProducts();
