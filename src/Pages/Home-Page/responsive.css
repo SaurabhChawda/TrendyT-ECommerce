@@ -1,0 +1,38 @@
+@media screen and (max-width: 975px) {
+  .card-product-category {
+    margin: 0 2em;
+  }
+  .card-offer__container,
+  .card-product,
+  .card__container--demo {
+    margin: 1rem 2em;
+  }
+}
+@media screen and (max-width: 750px) {
+  .card-product-category, .card__container--demo{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 550px) {
+  .card-product-category {
+    margin: 0 1em;
+  }
+  .card-offer__container,
+  .card-product,
+  .card__container--demo {
+    margin: 8px 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+.nav-bar--simple{
+  display: none;
+}
+.nav-bar--hamburger{
+  padding-right: 8px;
+  display:flex;
+  justify-content: space-between;
+}
+.nav-bar__img--logo{
+  margin-left: auto;
+}
+}
