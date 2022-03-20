@@ -60,3 +60,11 @@
   background-color: var(--primary-bg-color);
   border: 2px solid var(--primary-color);
 }
+
+@media screen and (max-width: 800px) {
+  .nav-bar--hamburger {
+    padding-right: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
