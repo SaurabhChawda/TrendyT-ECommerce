@@ -158,13 +158,16 @@ main {
 
 /*card*/
 .card-product {
+  height: fit-content;
   margin: 2rem 5rem;
   display: grid;
+  justify-items: center;
   gap: 20px;
   grid-template-rows: auto;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 .card-product__wrapper {
+  max-width: 20rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./home.css";
-import "./responsive.css";
+import "./home-responsive.css";
 import { Nav } from "../../components/Nav/Nav";
 import { NavForMobile } from "../../components/NavForMobile/NavForMobile.js";
 import { Footer } from "../../components/Footer/Footer";
