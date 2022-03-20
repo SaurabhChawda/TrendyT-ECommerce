@@ -1,14 +1,14 @@
 import React from "react";
 import "./home.css";
 import "./home-responsive.css";
-import { Nav } from "../../components/Nav/Nav";
-import { NavForMobile } from "../../components/NavForMobile/NavForMobile.js";
-import { Footer } from "../../components/Footer/Footer";
-import { HomeScreen } from "./Components/HomeScreen";
-import { Category } from "./Components/Category";
-import { Offer } from "./Components/Offer";
-import { Product } from "./Components/Product";
-import { Services } from "./Components/Services";
+import { Nav, Footer, NavForMobile } from "../../components/Index.js";
+import {
+  HomeScreen,
+  Product,
+  Offer,
+  Category,
+  Services,
+} from "./Components/Index.js";
 
 export function Home() {
   return (
