@@ -5,5 +5,5 @@ export const SearchProduct = (data, sortBy) => {
       item.title.toLowerCase().match(sortBy.toLowerCase())
     );
   }
-  return filteredList;
+  return data;
 };

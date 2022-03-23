@@ -16,7 +16,7 @@ export const SortByPrice = (data, sortBy) => {
     if (sortBy === "800")
       return filteredList.filter((item) => (item.price <= 800 ? true : false));
 
-    return filteredList;
+    return data;
   }
-  return filteredList;
+  return data;
 };

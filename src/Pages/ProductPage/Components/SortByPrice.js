@@ -1,7 +1,7 @@
 import { useFilter } from "../../../Contexts/FilterContext";
 
 export const SortByPrice = () => {
-  const { dispatch } = useFilter();
+  const { state, dispatch } = useFilter();
   return (
     <div className="sidebar--filter sidebar--filter-price">
       <h2>Price</h2>

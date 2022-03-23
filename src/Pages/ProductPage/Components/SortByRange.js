@@ -1,6 +1,6 @@
 import { useFilter } from "../../../Contexts/FilterContext";
 export function SortByRange() {
-  const { dispatch } = useFilter();
+  const { state, dispatch } = useFilter();
   return (
     <div className="sidebar--filter sidebar--sortBy-filter">
       <h2>Sort by</h2>
@@ -13,6 +13,7 @@ export function SortByRange() {
             className="sidebar__input"
             type="radio"
             name="Sorting"
+            checked={state.sortbyrange === "LOW_TO_HIGH"}
           />
           <label htmlFor="sortBy Filter">Price - Low to high</label>
         </li>
@@ -24,6 +25,7 @@ export function SortByRange() {
             className="sidebar__input"
             type="radio"
             name="Sorting"
+            checked={state.sortbyrange === "HIGH_TO_LOW"}
           />
           <label htmlFor="sortBy Filter">price - High to Low</label>
         </li>
