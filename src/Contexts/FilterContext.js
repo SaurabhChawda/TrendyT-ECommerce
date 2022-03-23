@@ -25,11 +25,25 @@ const FilterProvider = ({ children }) => {
     sortbyrange: "",
   });
 
-  const SearchedList = SearchProduct(data, state.searchProdcut);
-  const sortBypriceList = SortByPrice(SearchedList, state.sortbyprice);
-  const sortByCategoryList = SortByCategory(sortBypriceList, state);
-  const sortByRatingList = SortByRating(sortByCategoryList, state.sortbyrating);
-  const updatedList = SortByRange(sortByRatingList, state.sortbyrange);
+  // const SearchedList = SearchProduct(data, state.searchProdcut);
+  // const sortBypriceList = SortByPrice(SearchedList, state.sortbyprice);
+  // const sortByCategoryList = SortByCategory(sortBypriceList, state);
+  // const sortByRatingList = SortByRating(sortByCategoryList, state.sortbyrating);
+  // const updatedList = SortByRange(sortByRatingList, state.sortbyrange);
+
+  const updatedList = SortByRange(
+    SortByRating(
+      SortByCategory(
+        SortByPrice(
+          SearchProduct(data, state.searchProdcut),
+          state.sortbyprice
+        ),
+        state
+      ),
+      state.sortbyrating
+    ),
+    state.sortbyrange
+  );
 
   return (
     <FilterContext.Provider value={{ state, dispatch, updatedList }}>
