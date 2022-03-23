@@ -1,0 +1,21 @@
+.wishlist-page {
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-rows: 2.5rem minmax(calc(100vh - 7.5rem), 1fr) 5rem;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+.wishlist__main {
+  grid-area: main;
+  background-color: var(--secondary-bg-color);
+}
+
+/* Wishlist Header */
+.wishlist__header {
+  margin-top: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: var(--font-size-large);
+}

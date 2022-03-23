@@ -8,7 +8,7 @@
     "footer";
 }
 
-main {
+.home-page__main-container {
   grid-area: main;
   background-color: var(--secondary-bg-color);
 }
@@ -253,16 +253,4 @@ main {
 
 .card-service__wrapper {
   margin: 1rem 0;
-}
-/* Service card Ends Here*/
-::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px rgb(255, 255, 255);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
 }
