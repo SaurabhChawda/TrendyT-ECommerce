@@ -11,11 +11,15 @@
   grid-area: main;
   background-color: var(--secondary-bg-color);
 }
-
 /* Wishlist Header */
 .wishlist__header {
   margin-top: 3rem;
   text-align: center;
   color: var(--primary-color);
   font-size: var(--font-size-large);
+}
+.card-product_Empty {
+  margin-top: 10rem;
+  color: white;
+  font-size: var(--font-size-X-large);
 }

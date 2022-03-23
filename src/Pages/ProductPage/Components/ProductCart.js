@@ -1,7 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
 import { useFilter } from "../../../Contexts/FilterContext";
+import { useUser } from "../../../Contexts/UserContext";
 export const ProductCart = () => {
   const { updatedList } = useFilter();
+  const { dispatch } = useUser();
   return (
     <section className="card-product">
       {updatedList.map((item) => {
@@ -23,10 +25,24 @@ export const ProductCart = () => {
             </div>
             <div className="card-product__secondary--actions">
               <div className="card-product__button--container">
-                <button className=" card-product__btn card-product__button--primary">
+                <button
+                  className=" card-product__btn card-product__button--primary"
+                  onClick={() =>
+                    dispatch({
+                      type: "Wishlist",
+                      payload: item,
+                      id: item.id,
+                    })
+                  }
+                >
                   WISHLIST
                 </button>
-                <button className="card-product__btn card-product__button--secondary">
+                <button
+                  className="card-product__btn card-product__button--secondary"
+                  onClick={() =>
+                    dispatch({ type: "Cart", payload: item, id: item.id })
+                  }
+                >
                   BUY NOW
                 </button>
               </div>
