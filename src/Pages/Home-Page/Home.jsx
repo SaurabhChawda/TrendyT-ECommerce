@@ -15,7 +15,7 @@ export function Home() {
     <div className="home-page">
       <Nav />
       <NavForMobile />
-      <main>
+      <main className="home-page__main-container">
         <HomeScreen />
         <Category />
         <Offer />

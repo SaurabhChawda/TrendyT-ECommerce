@@ -24,7 +24,7 @@ export function Product() {
         <SortByRange />
         <ClearFilter />
       </div>
-      <main>
+      <main className="product-page__main-container">
         <ProductCart />
       </main>
       <Footer />

@@ -8,7 +8,7 @@
     "footer";
 }
 
-main {
+.home-page__main-container {
   grid-area: main;
   background-color: var(--secondary-bg-color);
 }
