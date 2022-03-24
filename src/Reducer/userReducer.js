@@ -14,9 +14,7 @@ export const Reducer = (state, action) => {
     case "Remove_From_Wishlist":
       return {
         ...state,
-        wishlist: state.wishlist.filter((item) =>
-          item.id === action.payload ? false : true
-        ),
+        wishlist: state.wishlist.filter((item) => item.id !== action.payload),
       };
     case "Cart":
       if (state.cart.length === 0) {
@@ -35,9 +33,7 @@ export const Reducer = (state, action) => {
     case "Remove_From_Cart":
       return {
         ...state,
-        cart: state.cart.filter((item) =>
-          item.id === action.payload ? false : true
-        ),
+        cart: state.cart.filter((item) => item.id !== action.payload),
       };
     case "Add_Item_In_Cart":
       return {
