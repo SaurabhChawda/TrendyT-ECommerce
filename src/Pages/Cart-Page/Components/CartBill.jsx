@@ -20,38 +20,38 @@ export const CartBill = () => {
   return (
     <>
       {cartdata.length === 0 ? (
-        <h1 className="card-product_Empty">Your Cart is empty!</h1>
+        false
       ) : (
-        <div className="cart__detail">
-          <div className="cart__item-demo cart__detail--price">
-            <h1>PRICE DETAILS</h1>
-          </div>
-          <hr />
-          <div className="cart__item-demo cart__detail--total">
-            <small>Items</small>
-            <small>{cartdata.length}</small>
-          </div>
-          <div className="cart__item-demo cart__detail--mrp">
-            <small>Total MRP</small>
-            <small>{totalData.totalPrice}</small>
-          </div>
-          <div className="cart__item-demo cart__detail--discount">
-            <small>Discount</small>
-            <small>- ₹{totalData.totalDiscount}</small>
-          </div>
-          <div className="cart__item-demo cart__detail-delivery">
-            <small>Delivery Charges</small>
-            <small>Free Delivery</small>
-          </div>
-          <hr />
-          <div className="cart__item-demo cart__detail--total">
-            <small>Total </small>
-            <small>₹{totalData.totalPrice - totalData.totalDiscount}</small>
-          </div>
-          <div className="cart__item-demo cart__detail--place-order">
-            <button className="cart__btn">Place order</button>
-          </div>
+      <div className="cart__detail">
+        <div className="cart__item-demo cart__detail--price">
+          <h1>PRICE DETAILS</h1>
         </div>
+        <hr />
+        <div className="cart__item-demo cart__detail--total">
+          <small>Items</small>
+          <small>{cartdata.length}</small>
+        </div>
+        <div className="cart__item-demo cart__detail--mrp">
+          <small>Total MRP</small>
+          <small>{totalData.totalPrice}</small>
+        </div>
+        <div className="cart__item-demo cart__detail--discount">
+          <small>Discount</small>
+          <small>- ₹{totalData.totalDiscount}</small>
+        </div>
+        <div className="cart__item-demo cart__detail-delivery">
+          <small>Delivery Charges</small>
+          <small>Free Delivery</small>
+        </div>
+        <hr />
+        <div className="cart__item-demo cart__detail--total">
+          <small>Total </small>
+          <small>₹{totalData.totalPrice - totalData.totalDiscount}</small>
+        </div>
+        <div className="cart__item-demo cart__detail--place-order">
+          <button className="cart__btn">Place order</button>
+        </div>
+      </div>
       )}
     </>
   );

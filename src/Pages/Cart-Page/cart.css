@@ -10,8 +10,13 @@
 
 .Cart-Page__main {
   grid-area: main;
-  display: grid;
   background-color: var(--secondary-bg-color);
+}
+.card-product_Empty {
+  text-align: center;
+  margin-top: 10rem;
+  color: white;
+  font-size: var(--font-size-X-large);
 }
 
 /* Cart Header */
