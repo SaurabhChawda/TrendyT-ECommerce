@@ -1,0 +1,13 @@
+  @media screen and (max-width: 500px) {
+  .nav-bar--simple{
+    display: none;
+  }
+  .nav-bar--hamburger{
+    padding-right: 8px;
+    display:flex;
+    justify-content: space-between;
+  }
+  .nav-bar__img--logo{
+    margin-left: auto;
+  }
+  }
