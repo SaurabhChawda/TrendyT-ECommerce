@@ -17,7 +17,7 @@
   }
   .footer__content {
     color: var(--primary-color);
-    font-size: var(--font-size-medium);
+    font-size: var(--font-size-regular);
     margin: 8px;
   }
   
