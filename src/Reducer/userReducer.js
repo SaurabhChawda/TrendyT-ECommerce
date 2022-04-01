@@ -22,11 +22,20 @@ export const Reducer = (state, action) => {
           ...state,
           cart: [...state.cart, { ...action.payload, qty: 1 }],
         };
+      }
+      let productOccurance = state.cart.find((item) => item.id === action.id);
+      if (productOccurance) {
+        return {
+          ...state,
+          cart: state.cart.map((item) =>
+            action.id === item.id ? { ...item, qty: item.qty + 1 } : item
+          ),
+        };
       } else {
         return {
           ...state,
           cart: state.cart
-            .filter((item) => item.id !== action.id)
+            .filter((item) => action.id !== item.id)
             .concat({ ...action.payload, qty: 1 }),
         };
       }
