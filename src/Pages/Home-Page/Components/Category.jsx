@@ -1,4 +1,7 @@
+import { useFilter } from "../../../Contexts/FilterContext";
+import { Link } from "react-router-dom";
 export const Category = () => {
+  const { state, dispatch } = useFilter();
   return (
     <>
       <div className="card__header">
@@ -17,11 +20,14 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--man">
               Man's T-shirt
             </h1>
-            <a href="/Product-Category/mans-category.html">
-              <button className="card-product-category__btn card-product-category__btn--man">
+            <Link to="/products">
+              <button
+                className="card-product-category__btn card-product-category__btn--man"
+                onClick={() => dispatch({ type: "Show_Man_Tshirt" })}
+              >
                 Buy Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-product-category--demo card-product-category--Women">
@@ -34,11 +40,14 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--women">
               women's T-shirt
             </h1>
-            <a href="/Product-Category/womens-category.html">
-              <button className="card-product-category__btn card-product-category__btn--women">
+            <Link to="/products">
+              <button
+                className="card-product-category__btn card-product-category__btn--women"
+                onClick={() => dispatch({ type: "Show_Women_Tshirt" })}
+              >
                 Buy Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-product-category--demo card-product-category--kid">
@@ -51,11 +60,14 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--kid">
               Kid's T-Shirt
             </h1>
-            <a href="/Product-Category/Kids-category.html">
-              <button className="card-product-category__btn card-product-category__btn--kid">
+            <Link to="/products">
+              <button
+                className="card-product-category__btn card-product-category__btn--kid"
+                onClick={() => dispatch({ type: "Show_Kids_Tshirt" })}
+              >
                 Buy Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="card-product-category--demo card-product-category--family">
@@ -68,11 +80,14 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--family">
               Family T-Shirt
             </h1>
-            <a href="/Product-Category/Family-category.html">
-              <button className="card-product-category__btn card-product-category__btn--family">
+            <Link to="/products">
+              <button
+                className="card-product-category__btn card-product-category__btn--family"
+                onClick={() => dispatch({ type: "Show_Family_Tshirt" })}
+              >
                 Buy Now
               </button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>

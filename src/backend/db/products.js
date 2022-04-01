@@ -13,7 +13,7 @@ export const products = [
     price: 350,
     originalPrice: 650,
     discount: 300,
-    categoryName: "Man",
+    categoryName: "Family",
     Rating: 4,
   },
   {

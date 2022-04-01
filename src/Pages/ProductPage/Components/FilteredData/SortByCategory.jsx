@@ -29,7 +29,7 @@ export const SortByCategory = (data, state) => {
     );
     const FamilyCategory = filteredList.reduce(
       (pre, curr) =>
-        state.showWomenTshirt && curr.categoryName === "Family"
+        state.showFamilyTshirt && curr.categoryName === "Family"
           ? [...pre, curr]
           : [...pre],
       KidsCategory
