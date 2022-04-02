@@ -1,6 +1,7 @@
 import { useFilter } from "../../../Contexts/FilterContext";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export const Category = () => {
+  const navigate = useNavigate();
   const { state, dispatch } = useFilter();
   return (
     <>
@@ -20,14 +21,15 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--man">
               Man's T-shirt
             </h1>
-            <Link to="/products">
-              <button
-                className="card-product-category__btn card-product-category__btn--man"
-                onClick={() => dispatch({ type: "Show_Man_Tshirt" })}
-              >
-                Buy Now
-              </button>
-            </Link>
+            <button
+              className="card-product-category__btn card-product-category__btn--man"
+              onClick={() => {
+                navigate("/products");
+                dispatch({ type: "Show_Man_Tshirt" });
+              }}
+            >
+              Buy Now
+            </button>
           </div>
         </div>
         <div className="card-product-category--demo card-product-category--Women">
@@ -40,14 +42,15 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--women">
               women's T-shirt
             </h1>
-            <Link to="/products">
-              <button
-                className="card-product-category__btn card-product-category__btn--women"
-                onClick={() => dispatch({ type: "Show_Women_Tshirt" })}
-              >
-                Buy Now
-              </button>
-            </Link>
+            <button
+              className="card-product-category__btn card-product-category__btn--women"
+              onClick={() => {
+                navigate("/products");
+                dispatch({ type: "Show_Women_Tshirt" });
+              }}
+            >
+              Buy Now
+            </button>
           </div>
         </div>
         <div className="card-product-category--demo card-product-category--kid">
@@ -60,14 +63,15 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--kid">
               Kid's T-Shirt
             </h1>
-            <Link to="/products">
-              <button
-                className="card-product-category__btn card-product-category__btn--kid"
-                onClick={() => dispatch({ type: "Show_Kids_Tshirt" })}
-              >
-                Buy Now
-              </button>
-            </Link>
+            <button
+              className="card-product-category__btn card-product-category__btn--kid"
+              onClick={() => {
+                navigate("/products");
+                dispatch({ type: "Show_Kids_Tshirt" });
+              }}
+            >
+              Buy Now
+            </button>
           </div>
         </div>
         <div className="card-product-category--demo card-product-category--family">
@@ -80,14 +84,15 @@ export const Category = () => {
             <h1 className="card-product-category__title card-product-category__title--family">
               Family T-Shirt
             </h1>
-            <Link to="/products">
-              <button
-                className="card-product-category__btn card-product-category__btn--family"
-                onClick={() => dispatch({ type: "Show_Family_Tshirt" })}
-              >
-                Buy Now
-              </button>
-            </Link>
+            <button
+              className="card-product-category__btn card-product-category__btn--family"
+              onClick={() => {
+                navigate("/products");
+                dispatch({ type: "Show_Family_Tshirt" });
+              }}
+            >
+              Buy Now
+            </button>
           </div>
         </div>
       </section>
