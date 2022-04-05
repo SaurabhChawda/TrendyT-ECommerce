@@ -1,9 +1,9 @@
 import { createContext } from "react";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
-const ProductsContext = createContext(null);
+const DataContext = createContext(null);
 
-function ProductsProvider({ children }) {
+function DataProvider({ children }) {
   const [data, setdata] = useState([]);
   const [categoryData, setCategoryData] = useState([]);
 
@@ -21,12 +21,12 @@ function ProductsProvider({ children }) {
   }, []);
 
   return (
-    <ProductsContext.Provider value={{ data, categoryData }}>
+    <DataContext.Provider value={{ data, categoryData }}>
       {children}
-    </ProductsContext.Provider>
+    </DataContext.Provider>
   );
 }
 
-const useProducts = () => useContext(ProductsContext);
+const useData = () => useContext(DataContext);
 
-export { useProducts, ProductsProvider };
+export { useData, DataProvider };

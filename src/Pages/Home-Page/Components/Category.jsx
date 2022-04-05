@@ -1,10 +1,10 @@
 import { useFilter } from "../../../Contexts/FilterContext";
-import { useProducts } from "../../../Contexts/ProductsContext";
+import { useData } from "../../../Contexts/DataContext";
 import { useNavigate } from "react-router-dom";
 export const Category = () => {
   const navigate = useNavigate();
   const { dispatch } = useFilter();
-  const { categoryData } = useProducts();
+  const { categoryData } = useData();
   return (
     <div>
       <div className="card__header">
@@ -14,7 +14,7 @@ export const Category = () => {
         {categoryData &&
           categoryData.map((item) => {
             return (
-              <div className="card-product-category--demo">
+              <div key={item.id} className="card-product-category--demo">
                 <img
                   className="card-product-category--demo-img"
                   src={item.img}
