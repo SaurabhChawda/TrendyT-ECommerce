@@ -5,12 +5,15 @@ const ProductsContext = createContext(null);
 
 function ProductsProvider({ children }) {
   const [data, setdata] = useState([]);
+  const [categoryData, setCategoryData] = useState([]);
 
   useEffect(() => {
     (async () => {
       try {
-        const response = await axios.get("/api/products");
-        setdata(response.data.products);
+        const productResponse = await axios.get("/api/products");
+        setdata(productResponse.data.products);
+        const categoryResponse = await axios.get("/api/categories");
+        setCategoryData(categoryResponse.data.categories);
       } catch (error) {
         console.log(error);
       }
@@ -18,7 +21,7 @@ function ProductsProvider({ children }) {
   }, []);
 
   return (
-    <ProductsContext.Provider value={{ data }}>
+    <ProductsContext.Provider value={{ data, categoryData }}>
       {children}
     </ProductsContext.Provider>
   );
