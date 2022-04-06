@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer } from "react";
-import { useProducts } from "./ProductsContext";
+import { useData } from "./DataContext";
 import { Reducer } from "../Reducer/FilterReducer";
 import {
   SearchProduct,
@@ -12,7 +12,7 @@ import {
 const FilterContext = createContext(null);
 
 const FilterProvider = ({ children }) => {
-  const { data } = useProducts();
+  const { data } = useData();
 
   const [state, dispatch] = useReducer(Reducer, {
     searchProdcut: "",
