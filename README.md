@@ -17,9 +17,9 @@ Trendy-T is a Customized Printed T-shirt E-Commerce website. The Word Trendy sta
 
 # Trendy-T ScreenShots
 
-![Home-Page](/assets/image/Markdown-Images/Home-Page.png)
-![Product-Page](/assets/image/Markdown-Images/Product-page.png)
-![wishList-Page](/assets/image/Markdown-Images/Wishlist-page.png)
-![cart-Page](/assets/image/Markdown-Images/cart-page.png)
-![Login-Page](/assets/image/Markdown-Images/login-page.png)
-![signUp-Page](/assets/image/Markdown-Images/signup-page.png)
+![Home-Page](/public/assets/image/Markdown-Images/Home-Page.png)
+![Product-Page](/public/assets/image/Markdown-Images/Product-page.png)
+![wishList-Page](/public/assets/image/Markdown-Images/Wishlist-page.png)
+![cart-Page](/public/assets/image/Markdown-Images/cart-page.png)
+![Login-Page](/public/assets/image/Markdown-Images/login-page.png)
+![signUp-Page](/public/assets/image/Markdown-Images/signup-page.png)
