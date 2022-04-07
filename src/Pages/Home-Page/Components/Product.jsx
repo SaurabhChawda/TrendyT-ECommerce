@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from "uuid";
-import { useProducts } from "../../../Contexts/ProductsContext";
+import { useData } from "../../../Contexts/DataContext";
 import { useUser } from "../../../Contexts/UserContext";
 
 export const Product = () => {
-  const { data } = useProducts();
+  const { data } = useData();
   const { dispatch } = useUser();
   return (
     <>
