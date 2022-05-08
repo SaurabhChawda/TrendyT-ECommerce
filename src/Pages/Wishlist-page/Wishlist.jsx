@@ -1,11 +1,8 @@
-import { Nav } from "../../components/Nav/Nav";
-import { NavForMobile } from "../../components/NavForMobile/NavForMobile";
-import { Footer } from "../../components/Footer/Footer";
-import { WishlistHeader } from "./Components/WishlistHeader.jsx";
-import { AddToWishlist } from "./Components/AddToWishlist";
-
 import "./wishlist.css";
 import "./wishlist-Responsive.css";
+import { Nav, NavForMobile, Footer } from "../../components/Index";
+import { WishlistHeader } from "./Components/WishlistHeader.jsx";
+import { AddToWishlist } from "./Components/AddToWishlist";
 
 export function Wishlist() {
   return (

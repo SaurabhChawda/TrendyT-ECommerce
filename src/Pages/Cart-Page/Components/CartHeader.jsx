@@ -1,4 +1,4 @@
-import { useUser } from "../../../Contexts/UserContext";
+import { useUser } from "../../../Contexts/Index";
 export const CartHeader = () => {
   const { state } = useUser();
   return (

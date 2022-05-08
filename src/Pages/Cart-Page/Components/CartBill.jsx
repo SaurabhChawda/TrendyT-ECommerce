@@ -1,4 +1,4 @@
-import { useUser } from "../../../Contexts/UserContext";
+import { useUser } from "../../../Contexts/Index";
 export const CartBill = () => {
   const { state } = useUser();
   const cartdata = [...state.cart];

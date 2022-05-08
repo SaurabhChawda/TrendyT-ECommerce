@@ -28,20 +28,6 @@ a {
   --font-size-regular: clamp(12px, 2.5vw, 1rem);
   --font-size-small: clamp(8px, 1vw, 1rem);
 }
-
-/* :root {
-  --primary-color: #3db5fa;
-  --primary-bg-color: rgb(24, 22, 22);
-  --secondary-bg-color: rgb(34, 32, 32);
-  --white-color: white;
-  --black-color: black;
-  --font-size-XX-large: clamp(3rem, 12vw, 10rem);
-  --font-size-X-large: clamp(1.2rem, 2.5vw, 10rem);
-  --font-size-large: clamp(1rem, 1.5vw, 10rem);
-  --font-size-regular: clamp(12px, 2.5vw, 1rem);
-  --font-size-small: clamp(8px, 1vw, 1rem);
-} */
-
 /* login form ends here */
 
 /*** Scroll bar ***/

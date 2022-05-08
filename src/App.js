@@ -1,21 +1,37 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import { Home } from "../src/Pages/Home-Page/Home";
-import { Product } from "../src/Pages/ProductPage/Product";
-import { Wishlist } from "../src/Pages/Wishlist-page/Wishlist";
-import { Cart } from "../src/Pages/Cart-Page/Cart";
-import { Signup } from "../src/Pages/Signup-Page/Signup";
-import { Login } from "../src/Pages/Login-Page/Login";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Home, Product, Wishlist, Cart, SignUp, Login } from "../src/Pages/Index";
+import { PrivateRoute } from "./PrivateRoute/PrivateRoute";
+import Mockman from "mockman-js";
 function App() {
   return (
     <div className="App">
+      <ToastContainer autoClose={2000} />
+
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/products/" element={<Product />}></Route>
-        <Route path="/wishlist/" element={<Wishlist />}></Route>
-        <Route path="/cart/" element={<Cart />}></Route>
-        <Route path="/signup/" element={<Signup />}></Route>
+        <Route path="/signUp/" element={<SignUp />}></Route>
         <Route path="/login/" element={<Login />}></Route>
+        <Route
+          path="/wishlist/"
+          element={
+            <PrivateRoute>
+              <Wishlist />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route
+          path="/cart/"
+          element={
+            <PrivateRoute>
+              <Cart />
+            </PrivateRoute>
+          }
+        ></Route>
+        <Route path="/mock" element={<Mockman />}></Route>
       </Routes>
     </div>
   );

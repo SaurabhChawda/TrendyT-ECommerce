@@ -33,23 +33,13 @@ const FilterProvider = ({ children }) => {
 
   const updatedList = SortByRange(
     SortByRating(
-      SortByCategory(
-        SortByPrice(
-          SearchProduct(data, state.searchProdcut),
-          state.sortbyprice
-        ),
-        state
-      ),
+      SortByCategory(SortByPrice(SearchProduct(data, state.searchProdcut), state.sortbyprice), state),
       state.sortbyrating
     ),
     state.sortbyrange
   );
 
-  return (
-    <FilterContext.Provider value={{ state, dispatch, updatedList }}>
-      {children}
-    </FilterContext.Provider>
-  );
+  return <FilterContext.Provider value={{ state, dispatch, updatedList }}>{children}</FilterContext.Provider>;
 };
 
 const useFilter = () => useContext(FilterContext);
