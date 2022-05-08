@@ -1,5 +1,5 @@
-import "./signUp.css";
-import "./signUp-Responsive.css";
+import "./signup.css";
+import "./signup-Responsive.css";
 import { useState } from "react";
 import { Nav, NavForMobile, Footer } from "../../components/Index";
 import { useAuth } from "../../Contexts/Index";
