@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Nav, NavForMobile, Footer } from "../../components/Index";
 import { useAuth } from "../../Contexts/Index";
 import { NavLink } from "react-router-dom";
-export function SignUp() {
+export const SignUp = () => {
   const { signUpCredentials } = useAuth();
   const [showpassword, setShowPassword] = useState("password");
   const [newUser, setNewUser] = useState({
@@ -157,4 +157,4 @@ export function SignUp() {
       <Footer />
     </div>
   );
-}
+};
