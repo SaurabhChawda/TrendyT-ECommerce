@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Nav, NavForMobile, Footer } from "../../components/Index";
 import { useAuth } from "../../Contexts/Index";
 import { NavLink } from "react-router-dom";
-export const SignUp = () => {
+export const Signup = () => {
   const { signUpCredentials } = useAuth();
   const [showpassword, setShowPassword] = useState("password");
   const [newUser, setNewUser] = useState({
