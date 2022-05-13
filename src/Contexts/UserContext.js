@@ -24,6 +24,8 @@ const UserProvider = ({ children }) => {
           toast.error("Error");
         }
       }
+    }else{
+      toast.success("Kindly Login");
     }
   };
 
@@ -72,6 +74,8 @@ const UserProvider = ({ children }) => {
           toast.error("Error");
         }
       }
+    }else{
+      toast.success("Kindly Login");
     }
   };
   const RemoveFromCart = async (product) => {

@@ -4,7 +4,7 @@ import { useUser } from "../../../Contexts/UserContext";
 
 export const Product = () => {
   const { data } = useData();
-  const { dispatch } = useUser();
+  const { AddToWishlist, AddToCart } = useUser();
   return (
     <>
       {/* Header */}
@@ -24,44 +24,28 @@ export const Product = () => {
                       <img className="card-product__bg--img" src={item.img} />
                     </div>
                     <div className="card-product__content">
-                      <h3 className="card-product__content--title">
-                        {item.title}
-                      </h3>
-                      <span className="card-product__content--price">
-                        ₹ {item.price}/-
-                      </span>
-                      <small className="card-product__content--price-line">
-                        ₹ {item.originalPrice}
-                      </small>
+                      <h3 className="card-product__content--title">{item.title}</h3>
+                      <span className="card-product__content--price">₹ {item.price}/-</span>
+                      <small className="card-product__content--price-line">₹ {item.originalPrice}</small>
                     </div>
                   </div>
                   <div className="card-product__secondary--actions">
                     <div className="card-product__button--container">
                       <button
                         className=" card-product__btn card-product__button--primary"
-                        onClick={() =>
-                          dispatch({
-                            type: "Wishlist",
-                            payload: item,
-                            id: item.id,
-                          })
-                        }
+                        onClick={() => AddToWishlist(item)}
                       >
                         WISHLIST
                       </button>
                       <button
                         className="card-product__btn card-product__button--secondary"
-                        onClick={() =>
-                          dispatch({ type: "Cart", payload: item, id: item.id })
-                        }
+                        onClick={() => AddToCart(item)}
                       >
                         BUY NOW
                       </button>
                     </div>
                     <div className="card-product__badge">
-                      <span className="card-product__badge-text">
-                        BestSaller
-                      </span>
+                      <span className="card-product__badge-text">BestSaller</span>
                     </div>
                   </div>
                 </div>
