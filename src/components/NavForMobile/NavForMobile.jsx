@@ -1,19 +1,18 @@
 import "./navForMobile.css";
-import { NavLink } from "react-router-dom";
 import { useState } from "react";
-
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../Contexts/Index";
 export const NavForMobile = () => {
   const [open, setOpen] = useState(false);
+  const login = JSON.parse(localStorage.getItem("login"));
+  const { logoutCredentials } = useAuth();
+  const navigate = useNavigate();
   return (
     <>
       <div className="nav-bar nav-bar--hamburger">
         <div className="nav-bar--logo">
           <NavLink to="/">
-            <img
-              className="nav-bar__img--logo"
-              src="/assets/image/HomePage-Images/Trendy-T Logo.png"
-              alt="Trendy-T"
-            />
+            <img className="nav-bar__img--logo" src="/assets/image/HomePage-Images/Trendy-T Logo.png" alt="Trendy-T" />
           </NavLink>
         </div>
         <div className="nav-bar--hamburger">
@@ -26,10 +25,7 @@ export const NavForMobile = () => {
         </div>
       </div>
 
-      <div
-        style={open ? { width: "13rem" } : { width: "0" }}
-        className="hamburger"
-      >
+      <div style={open ? { width: "13rem" } : { width: "0" }} className="hamburger">
         <div className="hamburger__header--wrapper">
           <h1 className="hamburger__title">TRENDY-T</h1>
           <img
@@ -52,11 +48,14 @@ export const NavForMobile = () => {
           <NavLink to="/cart/">
             <li className="hamburger__item">Cart</li>
           </NavLink>
-          <NavLink to="/login/">
-            <button className="hamburger__item hamburger__btn ">
-              Login / Sign-Up
-            </button>
-          </NavLink>
+          <button
+            className="hamburger__item hamburger__btn "
+            onClick={() => {
+              login ? logoutCredentials() : navigate("/login/");
+            }}
+          >
+            {login ? "Logout" : "Login / SignUp"}
+          </button>
         </ul>
       </div>
     </>

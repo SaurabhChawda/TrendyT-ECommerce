@@ -3,10 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
-import { DataProvider } from "../src/Contexts/DataContext";
-import { UserProvider } from "./Contexts/UserContext";
-import { FilterProvider } from "../src/Contexts/FilterContext";
-
+import { DataProvider, UserProvider, FilterProvider, AuthProvider } from "../src/Contexts/Index";
 // Call make Server
 makeServer();
 
@@ -14,11 +11,13 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <DataProvider>
-        <UserProvider>
-          <FilterProvider>
-            <App />
-          </FilterProvider>
-        </UserProvider>
+        <AuthProvider>
+          <UserProvider>
+            <FilterProvider>
+              <App />
+            </FilterProvider>
+          </UserProvider>
+        </AuthProvider>
       </DataProvider>
     </Router>
   </React.StrictMode>,

@@ -1,5 +1,4 @@
-import { useFilter } from "../../../Contexts/FilterContext";
-import { useData } from "../../../Contexts/DataContext";
+import { useData,useFilter } from "../../../Contexts/Index"
 import { useNavigate } from "react-router-dom";
 export const Category = () => {
   const navigate = useNavigate();

@@ -1,13 +1,18 @@
-  @media screen and (max-width: 500px) {
-  .nav-bar--simple{
+@media screen and (max-width: 500px) {
+  .nav-bar--simple {
     display: none;
   }
-  .nav-bar--hamburger{
+  .nav-bar--hamburger {
     padding-right: 8px;
-    display:flex;
+    display: flex;
     justify-content: space-between;
   }
-  .nav-bar__img--logo{
+  .nav-bar__img--logo {
     margin-left: auto;
   }
+  .signup-form--username-wrapper,
+  .signup-form--user-password-wrapper {
+    flex-direction: column;
+    gap: 0rem;
   }
+}

@@ -1,4 +1,4 @@
-import { useFilter } from "../../../Contexts/FilterContext";
+import { useFilter } from "../../../Contexts/Index";
 
 export const SortByRating = () => {
   const { state, dispatch } = useFilter();

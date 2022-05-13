@@ -1,10 +1,8 @@
-import { Nav } from "../../components/Nav/Nav";
-import { NavForMobile } from "../../components/NavForMobile/NavForMobile.jsx";
-import { Footer } from "../../components/Footer/Footer";
+import { Nav,NavForMobile,Footer} from "../../components/Index";
 import { CartHeader } from "./Components/CartHeader";
 import { AddToCart } from "./Components/AddToCart";
 import { CartBill } from "./Components/CartBill";
-import { useUser } from "../../Contexts/UserContext";
+import { useUser } from "../../Contexts/Index";
 import "./cart.css";
 import "./cart-Responsive.css";
 

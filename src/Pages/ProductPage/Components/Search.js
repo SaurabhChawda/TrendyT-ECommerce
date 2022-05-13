@@ -1,4 +1,4 @@
-import { useFilter } from "../../../Contexts/FilterContext";
+import { useFilter } from "../../../Contexts/Index";
 export function Search() {
   const {dispatch} = useFilter()
   return (
