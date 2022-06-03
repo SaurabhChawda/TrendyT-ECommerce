@@ -1,7 +1,7 @@
 import { useUser } from "../../../Contexts/Index";
 
 export const AddToCart = () => {
-  const { RemoveFromCart, IncreaseQty, DecreaseQty, state } = useUser();
+  const { RemoveFromCart, IncreaseQty, DecreaseQty, state, AddToWishlist } = useUser();
   const cartdata = [...state.cart];
   return (
     <div className="card-product">
@@ -24,7 +24,7 @@ export const AddToCart = () => {
                     className="card-product--quantity-demo card-product--quantity-add"
                     onClick={() => IncreaseQty(item)}
                   >
-                    Add
+                    +
                   </button>
                   <span className="card-product--quantity--count">{item.qty}</span>
                   <button
@@ -32,12 +32,18 @@ export const AddToCart = () => {
                     disabled={item.qty <= 1 ? true : false}
                     onClick={() => DecreaseQty(item)}
                   >
-                    Sub
+                    -
                   </button>
                 </div>
               </div>
               <div className="card-product__secondary--actions">
                 <div className="card-product__button--container">
+                  <button
+                    className=" card-product__btn card-product__button--primary"
+                    onClick={() => AddToWishlist(item)}
+                  >
+                    WISHLIST
+                  </button>
                   <button
                     className=" card-product__btn card-product__button--primary"
                     onClick={() => RemoveFromCart(item)}
