@@ -6,7 +6,7 @@ import { Nav, NavForMobile, Footer } from "../../components/Index";
 import { useAuth } from "../../Contexts/Index";
 
 export function Login() {
-  const { loginCredentials, logoutCredentials } = useAuth();
+  const { loginCredentials } = useAuth();
   const [userLogin, setUserLogin] = useState({ username: "", password: "" });
   const [showpassword, setShowPassword] = useState("password");
 
@@ -71,6 +71,12 @@ export function Login() {
             <div className="login-form--submit">
               <button className="login-form__btn--submit" onClick={(event) => loginHandler(event, userLogin)}>
                 Login
+              </button>
+              <button
+                className="login-form__btn--submit"
+                onClick={(event) => loginHandler(event, { username: "admin@gmail.com", password: "admin" })}
+              >
+                Login As Guest
               </button>
             </div>
             <div className="login-form--new-account">
